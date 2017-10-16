@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="window" maxHeight="400.0" maxWidth="640.0" minHeight="400.0" minWidth="640.0" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChatController">
+  <children>
+    <MenuBar fx:id="menu" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem fx:id="menuSend" mnemonicParsing="false" onAction="#sendMessage" text="Send Current Typed Message" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="menuQuit" mnemonicParsing="false" onAction="#quit" text="Quit" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="View">
+               <items>
+                  <Menu mnemonicParsing="false" text="Background Color">
+                     <items>
+                        <MenuItem fx:id="bckWhite" mnemonicParsing="false" onAction="#setBackgroundColor" text="White" />
+                        <MenuItem fx:id="bckBlack" mnemonicParsing="false" onAction="#setBackgroundColor" text="Black" />
+                        <MenuItem fx:id="bckRed" mnemonicParsing="false" onAction="#setBackgroundColor" text="Red" />
+                        <MenuItem fx:id="bckBlue" mnemonicParsing="false" onAction="#setBackgroundColor" text="Blue" />
+                        <MenuItem fx:id="bckOrange" mnemonicParsing="false" onAction="#setBackgroundColor" text="Orange" />
+                        <MenuItem fx:id="bckGreen" mnemonicParsing="false" onAction="#setBackgroundColor" text="Green" />
+                        <MenuItem fx:id="bckPurple" mnemonicParsing="false" onAction="#setBackgroundColor" text="Purple" />
+                     </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Log Text Color">
+                     <items>
+                        <MenuItem fx:id="logPurple" mnemonicParsing="false" onAction="#setLogColor" text="Purple" />
+                        <MenuItem fx:id="logGreen" mnemonicParsing="false" onAction="#setLogColor" text="Green" />
+                        <MenuItem fx:id="logOrange" mnemonicParsing="false" onAction="#setLogColor" text="Orange" />
+                        <MenuItem fx:id="logBlue" mnemonicParsing="false" onAction="#setLogColor" text="Blue" />
+                        <MenuItem fx:id="logRed" mnemonicParsing="false" onAction="#setLogColor" text="Red" />
+                        <MenuItem fx:id="logBlack" mnemonicParsing="false" onAction="#setLogColor" text="Black" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="User Text Color">
+                     <items>
+                        <MenuItem fx:id="txtPurple" mnemonicParsing="false" onAction="#setTextColor" text="Purple" />
+                        <MenuItem fx:id="txtGreen" mnemonicParsing="false" onAction="#setTextColor" text="Green" />
+                        <MenuItem fx:id="txtOrange" mnemonicParsing="false" onAction="#setTextColor" text="Orange" />
+                        <MenuItem fx:id="txtBlue" mnemonicParsing="false" onAction="#setTextColor" text="Blue" />
+                        <MenuItem fx:id="txtRed" mnemonicParsing="false" onAction="#setTextColor" text="Red" />
+                        <MenuItem fx:id="txtBlack" mnemonicParsing="false" onAction="#setTextColor" text="Black" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Font">
+                    <items>
+                        <MenuItem fx:id="fontArial" mnemonicParsing="false" onAction="#setFont" text="Arial" />
+                        <MenuItem fx:id="fontTimes" mnemonicParsing="false" onAction="#setFont" text="Times" />
+                        <MenuItem fx:id="fontApex" mnemonicParsing="false" onAction="#setFont" text="Apex Book New" />
+                        <MenuItem fx:id="fontCalibri" mnemonicParsing="false" onAction="#setFont" text="Calibri" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="fontUp" mnemonicParsing="false" onAction="#fontUp" text="Font Size Up" />
+                  <MenuItem fx:id="fontDown" mnemonicParsing="false" onAction="#fontDown" text="Font Size Down" />
+               </items>
+            </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+                  <MenuItem fx:id="chatHelp" mnemonicParsing="false" onAction="#commandHelp" text="Accepted Commands" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="aboutChat" mnemonicParsing="false" onAction="#aboutChat" text="About Chat With Me" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="txtSend" layoutX="14.0" layoutY="291.0" prefHeight="67.0" prefWidth="492.0">
+               <font>
+                  <Font name="ApexNew-Book" size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="txtLog" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="271.0" prefWidth="611.0">
+               <font>
+                  <Font name="ApexNew-Book" size="14.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="btnSend" defaultButton="true" layoutX="514.0" layoutY="291.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="67.0" prefWidth="111.0" text="Send">
+               <font>
+                  <Font name="ApexNew-Book" size="21.0" />
+               </font>
+            </Button>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
